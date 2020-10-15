@@ -1,0 +1,156 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#Container {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+}
+
+.Album {
+  width: 300px;
+  height: 200px;
+  margin: 3px;
+}
+
+#Modal {
+  display: block;
+  position: absolute;
+  min-width: 880px;
+  width: 100%;
+  max-width: 920px;
+  top: 50px;
+}
+
+.Input {
+  display: block;
+  position: relative;
+  left: -220px;
+  margin: 5px;
+  width: 300px;
+  height: 25px;
+  font-size: 20px;
+}
+#InputContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 40px !important;
+}
+
+.Input.false {
+  border-color: #b30707;
+  outline: none;
+}
+
+label {
+  position: relative;
+  font-size: 12px;
+  display: block;
+  text-align: left;
+  left: 35%;
+  width: 200px;
+  height: 20px;
+  color: #282c34;
+}
+
+#Submit {
+  display: block;
+  margin: 5px 26%;
+  width: 200px;
+  height: 25px;
+}
+
+#Close {
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 20px;
+  top: -20px;
+  left: 99%;
+}
+
+.ModalImage {
+  display: block;
+}
+
+#TextArea {
+  display: block;
+  position: absolute;
+  max-width: 250px;
+  right: 40px;
+  top: 10px;
+  font-size: 20px;
+  white-space: pre-line;
+}
+
+@media screen and (orientation: portrait) {
+
+  #Modal {
+    display: block;
+    align-items: center;
+    min-width: 280px;
+    width: 98%;
+    max-width: 920px;
+    top: 20px;
+  }
+
+  .Input {
+    display: block;
+    position: relative;
+    margin: 5px 20%;
+    width: 200px;
+    height: 20px;
+    top: 100px;
+    font-size: 18px;
+  }
+  #Submit {
+    display: block;
+    position: relative;
+    margin: 5px 26%;
+    width: 150px;
+    height: 40px;
+    top: 100px;
+  }
+
+  #Close {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    margin: auto;
+    width: 70px;
+    height: 20px;
+  }
+
+  .ModalImage {
+    top: 60px;
+    width: 94%;
+    position: relative;
+    display: block;
+    margin: auto;
+  }
+
+  #TextArea {
+    display: block;
+    position: relative;
+    max-width: 250px;
+    top: 70px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    margin: auto;
+  }
+}
