@@ -6,6 +6,7 @@ import {ModalRender} from "./Modal/Modal";
 import {_COMMENT, _COMMENT_NAME, _ALBUM, _APP_HEADER, _HEADER_TEXT,
     _CONTAINER, _COMMENT_INPUT, _NAME_PLACEHOLDER, _COMMENT_PLACEHOLDER
 } from './Const/Const'
+import {Loader} from "./Loader"
 
 
 class App extends Component {
@@ -38,7 +39,7 @@ class App extends Component {
             Disabler: 'disabled'
         }
     }
-    componentDidMount() {
+    componentWillMount() {
         fetch(_FETCH_URL)
             .then(res => res.json())
             .then(
@@ -50,7 +51,7 @@ class App extends Component {
                 },
                 (error) => {
                     this.setState({
-                        isLoaded: true,
+                        isLoaded: false,
                         error
                     });
                 }
@@ -114,6 +115,7 @@ class App extends Component {
                     onClick = {this.getFullImage.bind(this, i.id)}
                 />
             )
+
         })
 
     CloseHandler = () => {
@@ -170,6 +172,7 @@ class App extends Component {
             <div className="App">
                 <header className={_APP_HEADER}>
                     <p id={_HEADER_TEXT}>TEST APP</p>
+                    <Loader/>
                     <div id={_CONTAINER}>
                     {this.state.item.length !== 0 ?
                         ModalRender(this.state, this.AddComment.bind(), this.CloseHandler.bind(this)):

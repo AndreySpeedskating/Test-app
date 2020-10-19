@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+#Loader {
+  display: block;
+  position: absolute;
+  top: 50vh;
+  transition: 0.3s ease;
+}
 
 .App-header {
   background-color: #282c34;
@@ -17,6 +23,7 @@
   display: block;
   width: 100%;
   max-width: 920px;
+  transition: 0.3s ease;
 }
 
 .Album {
