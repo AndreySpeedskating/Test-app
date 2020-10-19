@@ -5,7 +5,14 @@
   display: block;
   position: absolute;
   top: 50vh;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
+}
+#FullLoader {
+  display: block;
+  position: absolute;
+  top: 30vh;
+  left: 200px;
+  transition: 0.5s ease;
 }
 
 .App-header {
@@ -17,6 +24,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header p {
+  position: relative;
+  top: -5vh;
 }
 
 #Container {
@@ -43,9 +55,10 @@
 
 .Input {
   display: block;
-  position: relative;
-  left: -220px;
+  position: absolute;
+  left: 20px;
   margin: 5px;
+  top: 410px;
   width: 300px;
   height: 25px;
   font-size: 20px;
@@ -64,21 +77,25 @@
 }
 
 label {
-  position: relative;
+  position: absolute;
   font-size: 12px;
   display: block;
   text-align: left;
-  left: 35%;
+  left: 37%;
   width: 200px;
   height: 20px;
   color: #282c34;
+  top: 420px;
 }
 
 #Submit {
   display: block;
-  margin: 5px 26%;
+  position: absolute;
+  margin: 5px auto;
   width: 200px;
   height: 25px;
+  top: 490px;
+  left: 80px;
 }
 
 #Close {
@@ -91,7 +108,8 @@ label {
 }
 
 .ModalImage {
-  display: block;
+  display: none;
+  position: absolute;
 }
 
 #TextArea {
@@ -137,7 +155,7 @@ label {
     display: block;
     position: relative;
     top: 20px;
-    left: 0px;
+    left: 0;
     margin: auto;
     width: 70px;
     height: 20px;

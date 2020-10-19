@@ -1,8 +1,8 @@
 import loader from "./Img/5.png"
 import React from "react";
 
-export const Loader = () => {
+export const Loader = (id) => {
     return (
-        <img id={'Loader'} src={loader}/>
+        <img id={id} src={loader}/>
     )
 }

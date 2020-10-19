@@ -4,14 +4,6 @@ import './index.css';
 import App from './App';
 
 
-window.onload = function () {
-   document.getElementById('Container').style.zIndex = '-999'
-    setTimeout(function (){
-        document.getElementById('Loader').style.zIndex = '-999'
-        document.getElementById('Container').style.zIndex = '0'
-    }, 2000)
-
-}
 
 ReactDOM.render(
   <React.StrictMode>

@@ -15,6 +15,7 @@ class App extends Component {
         this.state = {
             error: null,
             isLoaded: false,
+            isLoadedFull: false,
             items: [],
             item: [],
             comments: [],
@@ -90,7 +91,7 @@ class App extends Component {
             .then(
                 (result) => {
                     this.setState({
-                        isLoaded: true,
+                        isLoadedFull: true,
                         item: result.url,
                         id: result.id,
                         comments: result.comments
@@ -98,7 +99,7 @@ class App extends Component {
                 },
                 (error) => {
                     this.setState({
-                        isLoaded: true,
+                        isLoadedFull: false,
                         error
                     });
                 }
@@ -120,8 +121,10 @@ class App extends Component {
 
     CloseHandler = () => {
         this.setState({
-            item: []
+            item: [],
+            isLoadedFull: false
         })
+        document.getElementById('HeadText').style.display = 'block'
     }
 
 
@@ -172,7 +175,7 @@ class App extends Component {
             <div className="App">
                 <header className={_APP_HEADER}>
                     <p id={_HEADER_TEXT}>TEST APP</p>
-                    <Loader/>
+                    {this.state.isLoaded === false? Loader('Loader') : null}
                     <div id={_CONTAINER}>
                     {this.state.item.length !== 0 ?
                         ModalRender(this.state, this.AddComment.bind(), this.CloseHandler.bind(this)):
